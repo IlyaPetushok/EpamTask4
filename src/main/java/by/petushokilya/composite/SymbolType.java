@@ -1,4 +1,9 @@
 package by.petushokilya.composite;
 
-public class SymbolType {
+public enum SymbolType {
+    LETTER,
+    VOWEL,
+    CONSONANT,
+    PUNCTUATION,
+    DIGIT;
 }

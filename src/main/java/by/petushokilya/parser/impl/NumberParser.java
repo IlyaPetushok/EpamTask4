@@ -15,11 +15,6 @@ public class NumberParser implements TextComponentParser {
     @Override
     public TextComponent parse(String dataString) throws TextParserException {
         TextComposite mathExpression = new TextComposite(ComponentType.MATH_EXPRESSION);
-//        List<String> polishFormTokens = FromInfixToPostfixConverter.convert(dataString);
-//        List<MathematicalExpression> expressions = PolishNotationOperator.defineSequence(polishFormTokens);
-//        Context context = new Context();
-//        expressions.forEach(expression -> expression.interpret(context));
-//        dataString = context.pop().toString();
         dataString.chars().forEach(symbol -> {
             try {
                 mathExpression.addComponent(nextParser.parse(Character.toString(symbol)));

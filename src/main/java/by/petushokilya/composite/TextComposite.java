@@ -18,6 +18,13 @@ public class TextComposite implements TextComponent{
         components = new ArrayList<>();
     }
 
+    public ComponentType getType(){
+        return type;
+    }
+
+    public List<TextComponent> getComponents() {
+        return components;
+    }
 
     @Override
     public boolean addComponent(TextComponent component) throws TextParserException {
